@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+
+@section content{
+<section id="content">
+	  <div id="content">
+            <div class="form_settings">
+            <form action="/Admin/login" method ="post">
+            <h2>Adim Login</h2>
+            <p>&nbsp;</p>
+			<p><span>Name</span><input class="contact" type="text" name="name" value="" /></p>
+			<p><span>Password</span><input class="contact" type="password" name="password" value="" /></p>
+			 <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="Log In" /></p>
+            </form>
+          </div><!--close form_settings-->
+
+          <table>
+              <tr>
+                  <td>ID</td>
+                  <td>Name</td>
+                  <td>Password</td>
+
+              </tr>
+            @foreach (var a in Model)
+            {
+                <tr>
+                    <td>@a.Id</td>
+                    <td>@a.Admin_Name</td>
+                    <td>@a.Admin_Password</td>
+
+
+
+                </tr>
+            
+            }
+
+          </table>
+        <div class="content_item">
+		  <h1>Welcome To Your Website</h1> 
+	      <p>This is the official site of  Air Plane Registration System Design By : &lsquo;No Speaking Guy&rsquo; We provide you the  better facility which you will appriciate &pound; JAAT</p>	  
+		  
+		  <div class="content_image">
+		    <img src="images/content_image1.jpg" alt="image1"/>
+	      </div>
+		    <p>This is the official site of  Air Plane Registration System Design By : &lsquo;No Speaking Guy&rsquo; We provide you the  better facility which you will appriciate &pound; JAAT</p>	  
+		    <p>This is the official site of  Air Plane Registration System Design By : &lsquo;No Speaking Guy&rsquo; We provide you the  better facility which you will appriciate &pound; JAAT</p>	  
+		   <br style="clear:both"/>
+		  
+		  <div class="content_container">
+		     <p>This is the official site of  Air Plane Registration System Design By : &lsquo;No Speaking Guy&rsquo; We provide you the  better facility which you will appriciate &pound; JAAT</p>	  
+		 @* <div class="button_small">
+		   
+		    </div><!--close button_small-->*@
+		  </div><!--close content_container-->
+          <div class="content_container">
+		      <p>This is the official site of  Air Plane Registration System Design By : &lsquo;No Speaking Guy&rsquo; We provide you the  better facility which you will appriciate &pound; JAAT</p>	  
+		@*  <div class="button_small">
+		      
+		    </div><!--close button_small-->	*@	  
+		  </div><!--close content_container-->			  
+		</div><!--close content_item-->
+      </div><!--close content-->  
+</section>
+}
